@@ -17,14 +17,14 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Map (activity_map.xml)"
+            android:text="@string/Hi"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <Button
             android:id="@+id/button1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Home page" />
+            android:text="@string/ClickToMap" />
 
     </RelativeLayout>
 
