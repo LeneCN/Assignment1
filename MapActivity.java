@@ -31,7 +31,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(GoogleMap googleMap) {    //The activity is being created
         mMap = googleMap;
 
         LatLng gjovik = new LatLng(60.7954302, 10.6916303);// Add a marker in Gjøvik and moves the camera
@@ -42,9 +42,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
     }
 
    }
-
 //https://www.youtube.com/watch?v=NHXa96-r8TY I have used som of the code from the video in the code above
-//https://www.mkyong.com/android/android-activity-from-one-screen-to-another-screen/ I have used some code from this website on the 
+//https://www.mkyong.com/android/android-activity-from-one-screen-to-another-screen/ I have used some code from this website on the code below
 
 public class MapActivity extends Activity {
 
@@ -53,10 +52,11 @@ public class MapActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map); //uses the layout from the xml file called activity_map
+        setContentView(R.layout.activity_map);       //uses the layout from the xml file called activity_map
         addListenerOnButton();
     }
 
+    @Override
     public void addListenerOnButton() {
 
         final Context context = this;
