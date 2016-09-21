@@ -25,8 +25,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager() // Obtain the SupportMapFragment and get notified when the map is ready to be used.
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
@@ -44,6 +43,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
    }
 
+//https://www.youtube.com/watch?v=NHXa96-r8TY I have used som of the code from the video in the code above
+//https://www.mkyong.com/android/android-activity-from-one-screen-to-another-screen/ I have used some code from this website on the 
 
 public class MapActivity extends Activity {
 
@@ -52,7 +53,7 @@ public class MapActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_map); //uses the layout from the xml file called activity_map
         addListenerOnButton();
     }
 
@@ -67,7 +68,7 @@ public class MapActivity extends Activity {
             @Override
             public void onClick(View arg0) {
 
-                Intent intent = new Intent(context, MapActivity2.class);
+                Intent intent = new Intent(context, MapActivity2.class); //when the button gets clicked the second activity starts
                 startActivity(intent);
 
             }
